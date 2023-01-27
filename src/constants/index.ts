@@ -1,1 +1,1 @@
-export const IS_PROD = process.env.APP_ENV === "production";
+export const IS_PROD = process.env.NODE_ENV === "production";
