@@ -1,4 +1,4 @@
-import { Frame, Window, WindowContent, WindowHeader } from "react95";
+import { Window, WindowContent, WindowHeader } from "react95";
 import styled from "styled-components";
 
 export interface News {
@@ -11,16 +11,13 @@ export interface News {
 export default function News({ startDate, endDate, detail }: News) {
   return (
     <StyledWindow>
-      <WindowHeader>{detail}</WindowHeader>
-      <WindowContent>
-        <Frame variant="well">
-          {startDate} ~ {endDate}
-        </Frame>
-      </WindowContent>
+      <WindowHeader>{startDate === endDate ? startDate : `${startDate} ~ ${endDate}`}</WindowHeader>
+      <WindowContent>{detail}</WindowContent>
     </StyledWindow>
   );
 }
 
 const StyledWindow = styled(Window)`
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 `;

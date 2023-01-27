@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 import { APPBAR_HEIGHT } from "@/components/AppBar";
+import LoadingHandler from "@/components/LoadingHandler";
 import News from "@/components/news/News";
 import useGetNewsInfinite from "@/hooks/api/useGetNewsInfinite";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 export default function NewsPage() {
-  const { news, hasNextPage, fetchNextPage } = useGetNewsInfinite();
+  const { news, isLoading, hasNextPage, fetchNextPage } = useGetNewsInfinite();
 
   const { setTarget } = useIntersectionObserver({
     onIntersect: ([{ isIntersecting }]) => {
@@ -17,19 +18,21 @@ export default function NewsPage() {
   });
 
   return (
-    <Wrapper>
-      {news.map((eachNews) => (
-        <News
-          key={eachNews.id}
-          id={eachNews.id}
-          startDate={eachNews.startDate}
-          endDate={eachNews.endDate}
-          detail={eachNews.detail}
-        />
-      ))}
+    <LoadingHandler isLoading={isLoading}>
+      <Wrapper>
+        {news.map((eachNews) => (
+          <News
+            key={eachNews.id}
+            id={eachNews.id}
+            startDate={eachNews.startDate}
+            endDate={eachNews.endDate}
+            detail={eachNews.detail}
+          />
+        ))}
 
-      {hasNextPage && <div ref={setTarget} />}
-    </Wrapper>
+        {hasNextPage && <div ref={setTarget} />}
+      </Wrapper>
+    </LoadingHandler>
   );
 }
 

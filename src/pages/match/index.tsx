@@ -1,11 +1,17 @@
-import { type ChangeEventHandler, useState } from "react";
+import { type ChangeEventHandler, type MouseEventHandler, useState } from "react";
 import { Button, TextInput, Window, WindowContent, WindowHeader } from "react95";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 
 import { APPBAR_HEIGHT } from "@/components/AppBar";
 
 export default function Match() {
   const { onChange, value } = useMBTIInput();
+  const router = useRouter();
+
+  const onClickSubmit: MouseEventHandler<HTMLButtonElement> = () => {
+    router.push(`/match/${value}`);
+  };
 
   return (
     <Wrapper>
@@ -13,8 +19,8 @@ export default function Match() {
         <WindowHeader>What is your MBTI?</WindowHeader>
         <WindowContent style={{ width: "100%" }}>
           <ContentWrapper>
-            <TextInput placeholder="ENTJ" value={value} onChange={onChange} />
-            <Button>Submit</Button>
+            <TextInput placeholder="ENFJ" value={value} onChange={onChange} />
+            <Button onClick={onClickSubmit}>Submit</Button>
           </ContentWrapper>
         </WindowContent>
       </StyledWindow>

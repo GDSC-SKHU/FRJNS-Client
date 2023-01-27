@@ -20,7 +20,8 @@ const NEWS_QUERY_KEY = "news";
 
 const SIZE = 10;
 
-const getNews = (page: number) => get<Response>(`/news?page=${page}&size=${SIZE}`);
+const getNews = (page: number) =>
+  get<Response>(`/news?page=${page}&size=${SIZE}&sort=startDate,DESC`);
 
 export default function useGetNewsInfinite() {
   const query = useInfiniteQuery<Response>(

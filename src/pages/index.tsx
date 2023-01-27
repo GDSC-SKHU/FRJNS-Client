@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 import { APPBAR_HEIGHT } from "@/components/AppBar";
+import LoadingHandler from "@/components/LoadingHandler";
 import Video from "@/components/videos/Video";
 import useGetVideosInfinite from "@/hooks/api/useGetVideosInfinite";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 export default function Home() {
-  const { videos, hasNextPage, fetchNextPage } = useGetVideosInfinite();
+  const { videos, isLoading, hasNextPage, fetchNextPage } = useGetVideosInfinite();
 
   const { setTarget } = useIntersectionObserver({
     onIntersect: ([{ isIntersecting }]) => {
@@ -17,7 +18,7 @@ export default function Home() {
   });
 
   return (
-    <>
+    <LoadingHandler isLoading={isLoading}>
       <Wrapper>
         {videos.map((video) => (
           <Video key={video.id} url={video.url} title={video.title} />
@@ -35,7 +36,7 @@ export default function Home() {
           />
         )}
       </Wrapper>
-    </>
+    </LoadingHandler>
   );
 }
 
