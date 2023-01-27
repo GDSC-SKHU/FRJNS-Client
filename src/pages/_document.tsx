@@ -1,21 +1,26 @@
 import { Head, Html, Main, NextScript } from "next/document";
-import Script from "next/script";
+
+import { isProd } from "@/utils";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-T9CVL6WSLQ"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics">
-          {`window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        {isProd(process.env.NODE_ENV) && (
+          <>
+            {/* eslint-disable-next-line @next/next/next-script-for-ga */}
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9CVL6WSLQ" />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-            gtag('config', 'G-T9CVL6WSLQ');`}
-        </Script>
+  gtag('config', 'G-T9CVL6WSLQ');`,
+              }}
+            />
+          </>
+        )}
       </Head>
       <body>
         <Main />
