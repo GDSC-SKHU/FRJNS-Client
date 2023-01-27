@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Monitor } from "react95";
 import original from "react95/dist/themes/original";
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
+import { Hydrate, QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import styled, { ThemeProvider } from "styled-components";
 
 import AppBar from "@/components/AppBar";
@@ -11,17 +14,34 @@ import { mediaQuery } from "@/styles/media";
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 export default function App({ Component, pageProps }: AppProps) {
+  const [queryClient] = useState(
+    () =>
+      new QueryClient({
+        defaultOptions: {
+          queries: {
+            retry: false,
+            refetchOnWindowFocus: false,
+          },
+        },
+      }),
+  );
+
   return (
-    <ThemeProvider theme={original}>
-      <GlobalStyles />
-      <Background>
-        <Layout>
-          <AppBar />
-          <Component {...pageProps} />
-        </Layout>
-        <FRJNSMonitor />
-      </Background>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <Hydrate state={pageProps.dehydratedState}>
+        <ThemeProvider theme={original}>
+          <GlobalStyles />
+          <Background>
+            <Layout>
+              <AppBar />
+              <Component {...pageProps} />
+            </Layout>
+            <FRJNSMonitor />
+          </Background>
+          <ReactQueryDevtools />
+        </ThemeProvider>
+      </Hydrate>
+    </QueryClientProvider>
   );
 }
 

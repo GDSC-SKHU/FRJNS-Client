@@ -20,6 +20,9 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'ms_sans_serif';
   }
+  *{
+    box-sizing: border-box;
+  }
 `;
 
 export default GlobalStyles;
