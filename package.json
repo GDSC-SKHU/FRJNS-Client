@@ -19,6 +19,7 @@
     "react-is": "^18.2.0",
     "react-player": "^2.11.0",
     "react95": "^4.0.0",
+    "recoil": "^0.7.6",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {

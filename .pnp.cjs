@@ -59,6 +59,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-is", "npm:18.2.0"],\
             ["react-player", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:2.11.0"],\
             ["react95", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:4.0.0"],\
+            ["recoil", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:0.7.6"],\
             ["styled-components", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:5.3.6"],\
             ["typescript", "patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=ad5954"]\
           ],\
@@ -5368,6 +5369,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-is", "npm:18.2.0"],\
             ["react-player", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:2.11.0"],\
             ["react95", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:4.0.0"],\
+            ["recoil", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:0.7.6"],\
             ["styled-components", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:5.3.6"],\
             ["typescript", "patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=ad5954"]\
           ],\
@@ -5597,6 +5599,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/grapheme-splitter-npm-1.0.4-648f2bf509-0c22ec54de.zip/node_modules/grapheme-splitter/",\
           "packageDependencies": [\
             ["grapheme-splitter", "npm:1.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["hamt_plus", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/hamt_plus-npm-1.0.2-67a52ee1df-af26ea32db.zip/node_modules/hamt_plus/",\
+          "packageDependencies": [\
+            ["hamt_plus", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6915,6 +6926,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "react-dom",\
             "react",\
             "styled-components"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["recoil", [\
+        ["npm:0.7.6", {\
+          "packageLocation": "./.yarn/cache/recoil-npm-0.7.6-6f8de04e3d-2b31dd29a7.zip/node_modules/recoil/",\
+          "packageDependencies": [\
+            ["recoil", "npm:0.7.6"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:0.7.6", {\
+          "packageLocation": "./.yarn/__virtual__/recoil-virtual-9aaa8681d2/0/cache/recoil-npm-0.7.6-6f8de04e3d-2b31dd29a7.zip/node_modules/recoil/",\
+          "packageDependencies": [\
+            ["recoil", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:0.7.6"],\
+            ["@types/react", "npm:18.0.27"],\
+            ["@types/react-dom", "npm:18.0.10"],\
+            ["@types/react-native", null],\
+            ["hamt_plus", "npm:1.0.2"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:18.2.0"],\
+            ["react-native", null]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react-native",\
+            "@types/react",\
+            "react-dom",\
+            "react-native",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\

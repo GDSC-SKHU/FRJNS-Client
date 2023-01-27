@@ -7,12 +7,16 @@ import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
+import { useRecoilValue } from "recoil";
+
 import { type Video } from "@/hooks/api/useGetVideosInfinite";
+import { volumeState } from "@/store/volume";
 
 export type Props = Omit<Video, "id">;
 
 export default function Video({ url, title }: Props) {
   const { isPlaying, setTarget } = useAutoPlay();
+  const volume = useRecoilValue(volumeState);
 
   return (
     <StyledWrapper>
@@ -26,7 +30,7 @@ export default function Video({ url, title }: Props) {
           style={{ aspectRatio: "9 / 10" }}
           playing={isPlaying}
           controls={false}
-          muted
+          volume={volume}
           loop
         />
       </StyledWindow>
