@@ -69,6 +69,7 @@ function FRJNSMonitor() {
           muted
           playing
           controls={false}
+          loop
         />
       </Monitor>
     </MonitorWrapper>
