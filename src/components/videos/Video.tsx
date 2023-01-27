@@ -7,22 +7,17 @@ import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
-export interface Video {
-  id: number;
-  url: string;
-  title: string;
-  uploader: string;
-}
+import { type Video } from "@/hooks/api/useGetVideosInfinite";
 
-export default function Video({ url, title, uploader }: Video) {
+export type Props = Omit<Video, "id">;
+
+export default function Video({ url, title }: Props) {
   const { isPlaying, setTarget } = useAutoPlay();
 
   return (
     <StyledWrapper>
       <StyledWindow ref={setTarget}>
-        <WindowHeader style={{ overflow: "scroll", width: "100%" }}>
-          {title} - {uploader}
-        </WindowHeader>
+        <WindowHeader style={{ overflow: "scroll", width: "100%" }}>{title}</WindowHeader>
 
         <ReactPlayer
           url={url}

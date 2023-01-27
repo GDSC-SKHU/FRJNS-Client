@@ -34,6 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tanstack/react-query", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:4.23.0"],\
             ["@tanstack/react-query-devtools", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:4.23.0"],\
             ["@types/axios", "npm:0.14.0"],\
+            ["@types/lodash", "npm:4.14.191"],\
             ["@types/node", "npm:18.11.18"],\
             ["@types/react", "npm:18.0.27"],\
             ["@types/react-dom", "npm:18.0.10"],\
@@ -49,6 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:4.2.1"],\
             ["eslint-plugin-simple-import-sort", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:9.0.0"],\
             ["eslint-plugin-unused-imports", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:2.0.0"],\
+            ["lodash", "npm:4.17.21"],\
             ["next", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:13.1.5"],\
             ["next-fonts", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:1.5.1"],\
             ["prettier", "npm:2.8.3"],\
@@ -3272,6 +3274,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/lodash", [\
+        ["npm:4.14.191", {\
+          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.191-67a04a969b-ba0d5434e1.zip/node_modules/@types/lodash/",\
+          "packageDependencies": [\
+            ["@types/lodash", "npm:4.14.191"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/node", [\
         ["npm:18.11.18", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-18.11.18-d61e8a4a20-03f17f9480.zip/node_modules/@types/node/",\
@@ -5332,6 +5343,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tanstack/react-query", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:4.23.0"],\
             ["@tanstack/react-query-devtools", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:4.23.0"],\
             ["@types/axios", "npm:0.14.0"],\
+            ["@types/lodash", "npm:4.14.191"],\
             ["@types/node", "npm:18.11.18"],\
             ["@types/react", "npm:18.0.27"],\
             ["@types/react-dom", "npm:18.0.10"],\
@@ -5347,6 +5359,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:4.2.1"],\
             ["eslint-plugin-simple-import-sort", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:9.0.0"],\
             ["eslint-plugin-unused-imports", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:2.0.0"],\
+            ["lodash", "npm:4.17.21"],\
             ["next", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:13.1.5"],\
             ["next-fonts", "virtual:c86f1c82d96937e7ad5aa60e9739103e8e7fc6ce3165de1f4dcc07dfc7b227d30b0b4b2ca7453283f402a5d94a062f3a1c28768235ea0d8150d1cfb52163592f#npm:1.5.1"],\
             ["prettier", "npm:2.8.3"],\

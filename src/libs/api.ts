@@ -1,7 +1,7 @@
 import axios, { type AxiosError, type AxiosResponse } from "axios";
 
 const instance = axios.create({
-  baseURL: "",
+  baseURL: "https://frjns.ddns.net/api",
 });
 
 const interceptorResponseFulfilled = (response: AxiosResponse) => {
