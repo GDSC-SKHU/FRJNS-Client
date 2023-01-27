@@ -8,6 +8,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import styled, { ThemeProvider } from "styled-components";
 
 import AppBar from "@/components/AppBar";
+import SEO from "@/components/SEO";
 import GlobalStyles from "@/styles/Global";
 import { mediaQuery } from "@/styles/media";
 
@@ -30,6 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
         <ThemeProvider theme={original}>
+          <SEO />
           <GlobalStyles />
           <Background>
             <Layout>
